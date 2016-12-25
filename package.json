@@ -1,0 +1,26 @@
+{
+  "name": "query-extractor",
+  "version": "1.0.0",
+  "description": "A simple module to extract query parameters from URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanjain28/query-extractor.git"
+  },
+  "keywords": [
+    "query",
+    "extractor",
+    "utitlity",
+    "web",
+    "node"
+  ],
+  "author": "Ishan Jain <github.com/ishanjain28>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishanjain28/query-extractor/issues"
+  },
+  "homepage": "https://github.com/ishanjain28/query-extractor#readme"
+}
