@@ -1,5 +1,5 @@
 function getQueryParams(URL, queryName) {
-    var url = URL || window.location.href,
+    var url = URL || fullUrl(),
         name = queryName.replace(/[\[\]]/g, "\\$&"),
         regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         regexResults = regex.exec(url);
@@ -13,7 +13,7 @@ function getQueryParams(URL, queryName) {
 }
 
 function getQueryObject(url) {
-    var queryStr = (url || window.location.href).split("?")[1],
+    var queryStr = (url || fullUrl()).split("?")[1],
         queries = queryStr.split("&"),
         queryObj = {};
 
@@ -23,6 +23,10 @@ function getQueryObject(url) {
         queryObj[key] = keyValue;
     });
     return queryObj;
+}
+
+function fullUrl(){
+    return (req.protocol + '://' + req.get('host') + req.originalUrl)
 }
 
 module.exports = {
